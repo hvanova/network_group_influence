@@ -19,7 +19,7 @@ turtles-own [
 to setup
   clear-all
   setup-nodes
-  setup-groups
+  if num_groups != 0 [ setup-groups ]
   init-info
   if network_configuration = "spatially_clustered" [
     setup-spatially-clustered-network
@@ -36,6 +36,7 @@ end
 
 to reset
   init-info
+  reset-ticks
 end
 
 to setup-nodes
@@ -138,10 +139,10 @@ end
 to go
   check-spread
   while [ uniform? = FALSE ] [
-    if uniform_meeting_time and length groups != 0 [
+    if uniform_meeting_time and num_groups != 0 [
       groups-meet-uniform
     ]
-    if not uniform_meeting_time and length groups != 0 [
+    if not uniform_meeting_time and num_groups != 0 [
       groups-meet-nonuniform
     ]
     ;; each turtle attempts to influence its neighbors
@@ -320,7 +321,7 @@ CHOOSER
 flip_distribution
 flip_distribution
 "uniform" "normal" "random"
-0
+2
 
 SLIDER
 832
@@ -361,7 +362,7 @@ SWITCH
 110
 uniform_meeting_time
 uniform_meeting_time
-1
+0
 1
 -1000
 
@@ -405,7 +406,7 @@ CHOOSER
 initial_info_distribution
 initial_info_distribution
 "random" "normal"
-1
+0
 
 CHOOSER
 831
@@ -425,7 +426,7 @@ CHOOSER
 individual_action
 individual_action
 "copy" "average"
-0
+1
 
 SLIDER
 832
@@ -436,7 +437,7 @@ num_groups
 num_groups
 0
 50
-0.0
+10.0
 1
 1
 NIL
@@ -451,7 +452,7 @@ meeting_frequency
 meeting_frequency
 0
 50
-0.0
+1.0
 1
 1
 NIL
@@ -476,25 +477,6 @@ PENS
 "Mean Val" 1.0 0 -2674135 true "" "plot mean [value] of turtles"
 "Max" 1.0 0 -955883 true "" "plot max [value] of turtles"
 "Min" 1.0 0 -6459832 true "" "plot min [value] of turtles"
-
-PLOT
-834
-295
-1232
-458
-Standard Deviation and Range
-NIL
-NIL
-0.0
-0.0
-0.0
-0.0
-true
-true
-"" ""
-PENS
-"Variance" 1.0 0 -16777216 true "" "plot standard-deviation [value] of turtles"
-"Range" 1.0 0 -7500403 true "" "plot max [value] of turtles - min [value] of turtles"
 
 TEXTBOX
 21
