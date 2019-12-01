@@ -1,6 +1,5 @@
 # Group Influence on Spatially Connected and Random Networks 
 Complex Systems Independent Study
-Hannah VanWingen and Scott Page 
 
 ## Introduction 
   This study directs attention to modeling groups within a network, and observing the influence of group behavior with regards to network convergence toward a value. Regarding the modeling of natural phenomena, specifically with groups of people that adopt social trends, defined groups are an important aspect to account for within the model as they have a large influence on an individual’s own presence and values. 
