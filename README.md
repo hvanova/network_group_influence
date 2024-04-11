@@ -2,7 +2,8 @@
 Complex Systems Independent Study
 
 ## Introduction 
-  This study directs attention to modeling groups within a network, and observing the influence of group behavior with regards to network convergence toward a value. Regarding the modeling of natural phenomena, specifically with groups of people that adopt social trends, defined groups are an important aspect to account for within the model as they have a large influence on an individual’s own presence and values. 
+  This study directs attention to modeling groups within a network and observing the influence of group behavior with regards to network convergence toward a value or decision. Regarding the modeling of social phenomena, defining boundaries and behaviors of groups are a focus within the model as they can have a large influence on an individual’s patterns in adopting values depending on a combination of influence measures.
+
 
   The models developed for this project are complicated in nature, as they attempt to address a variety of information (values), initial information distributions, probability distributions associated with an individual changing its value, the probability that any individual joins a group, a variation in the number of groups, the ‘meeting’ times and frequencies of groups, and individual actions within the groups as well as outside groups concerning how information is spread. For simplicity, the model allows for individuals to be a member of one group or a member of no group. 
 
